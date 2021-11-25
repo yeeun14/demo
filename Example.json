@@ -1,5 +1,7 @@
 {
-  "firstName" : "TaeYoung",
-
-
+  "firstName" : "Kim",
+  "lastName" : "TaeYoung",
+  "dateOfBirth" : "19970805",
+  "address" : "GaJeong",
+  "city" : "InCheon"
 }

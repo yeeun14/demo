@@ -1,5 +1,6 @@
 package com.example.demo.jackson;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -9,9 +10,8 @@ public class Java_Json {
         this.name = name;
         this.age = age;
     }
-    Java_Json(){
 
-    }
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     String name;
     int age;
 
@@ -25,7 +25,7 @@ public class Java_Json {
     public static void main(String[] args) throws JsonProcessingException {
 
         ObjectMapper objectMapper = new ObjectMapper();
-        Java_Json person = new Java_Json("TaeYoung", 20);
+        Java_Json person = new Java_Json(null, 20);
 
         String personJson = objectMapper.writeValueAsString(person);
 
